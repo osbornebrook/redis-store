@@ -28,8 +28,8 @@ class Redis
       private
         def expires_in(options)
           if options
-            # Rack::Session           Merb                    Rails/Sinatra
-            options[:expire_after] || options[:expires_in] || options[:expire_in]
+            # Rack::Session           Merb                    Rails/Sinatra          Hack
+            options[:expire_after] || options[:expires_in] || options[:expire_in] || options[:ex]
           end
         end
     end
